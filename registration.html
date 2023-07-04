@@ -23,7 +23,7 @@
                         </a>
                         <ul class="menu__list">
                             <li class="menu__list-item">
-                                <a class="menu__list-link active" href="index.html">
+                                <a class="menu__list-link " href="index.html">
                                     MAIN
                                 </a>
                             </li>
@@ -91,44 +91,28 @@
                 <div class="row">
 
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="name">
-                            Name
-                            <input class="registration__form-item input" type="text" name="" id="name">
-                        </label>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <label class="registration__form-label" for="surname">
-                            Surname
-                            <input class="registration__form-item input" type="text" name="" id="surname">
-                        </label>
-                    </div>
-
-                    <div class="col-lg-4">
                         <label class="registration__form-label" for="email">
                             Email
                             <input class="registration__form-item input" type="text" name="" id="email">
+
+                            <span class="">*Important, all relevant information will be sent to this address</span>
+                        </label>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="gender">
+                            Title
+                            <select class="registration__form-item select" name="" id="gender">
+                                <option value="0">Mr.</option>
+                                <option value="1">Mrs.</option>
+                            </select>
                         </label>
                     </div>
 
                     <div class="col-lg-4">
                         <label class="registration__form-label" for="phone">
-                            Phone number
+                            Phone
                             <input class="registration__form-item input" type="text" name="" id="phone">
-                        </label>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <label class="registration__form-label" for="date">
-                            Date of birth
-                            <input class="registration__form-item input" type="text" name="" id="date">
-                        </label>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <label class="registration__form-label" for="country">
-                            Country
-                            <input class="registration__form-item input" type="text" name="" id="country">
                         </label>
                     </div>
 
@@ -143,6 +127,38 @@
                     </div>
 
                     <div class="col-lg-4">
+                        <label class="registration__form-label" for="name">
+                            First name
+                            <input class="registration__form-item input" type="text" name="" id="name">
+                        </label>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="surname">
+                            Surname
+                            <input class="registration__form-item input" type="text" name="" id="surname">
+                        </label>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="country">
+                            Country
+                            <input class="registration__form-item input" type="text" name="" id="country">
+                        </label>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="date">
+                            Date of birth
+                            <input class="registration__form-item input" type="text" name="" id="date">
+                        </label>
+                    </div>
+
+
+
+                    <div class="col-lg-4"></div>
+
+                    <div class="col-lg-4">
                         <div class="registration__btn-cover">
                             <label class="registration__form-label" for="photo">
                                 Photo
@@ -152,7 +168,10 @@
                                 </span>
                                 <input type="file" id="photo">
                             </label>
-
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="registration__btn-cover">
                             <label class="registration__form-label" for="passport">
                                 Passport photo
                                 <span class="registration__form-photo">
@@ -163,8 +182,113 @@
                             </label>
                         </div>
                     </div>
+                    <div class="col-lg-4"></div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="organisation">
+                            Organisation
+                            <input class="registration__form-item input" type="text" name="" id="organisation">
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="work-address">
+                            Work address
+                            <input class="registration__form-item input" type="text" name="" id="work-address">
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="position">
+                            Position
+                            <select class="registration__form-item select" name="" id="position">
+                                <option value="0">Minister (Head of delegation)</option>
+                                <option value="1">Minister (Head of delegation) 2</option>
+                            </select>
+                        </label>
+                    </div>
                     <div class="col-12">
                         <a class="registration__form-apply" href="#">Apply</a>
+                    </div>
+                </div>
+
+                <h2 class="registration__title page__title second">
+                    Accompanying persons(2)
+                </h2>
+                <p class="registration__subtext">
+                    *they are still required to register separately, this is for covering costs of accompanying people
+                    of Ministers (Deputy Ministers) (2 per country)
+                </p>
+
+
+                <h4 class="registration__suptitle">
+                    Person 1
+                </h4>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="title-2">
+                            Title
+                            <select class="registration__form-item select" name="" id="title-2">
+                                <option value="0">Minister (Head of delegation)</option>
+                                <option value="1">Minister (Head of delegation) 2</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="name-2">
+                            Name
+                            <input class="registration__form-item input" type="text" name="" id="name-2">
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="surname-2">
+                            Surname
+                            <input class="registration__form-item input" type="text" name="" id="surname-2">
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="gender-2">
+                            Gender
+                            <select class="registration__form-item select" name="" id="gender-2">
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+
+                <h4 class="registration__suptitle">
+                    Person 2
+                </h4>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="title-3">
+                            Title
+                            <select class="registration__form-item select" name="" id="title-3">
+                                <option value="0">Minister (Head of delegation)</option>
+                                <option value="1">Minister (Head of delegation) 2</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="name-3">
+                            Name
+                            <input class="registration__form-item input" type="text" name="" id="name-3">
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="surname-3">
+                            Surname
+                            <input class="registration__form-item input" type="text" name="" id="surname-3">
+                        </label>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="gender-3">
+                            Gender
+                            <select class="registration__form-item select" name="" id="gender-3">
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                        </label>
                     </div>
                 </div>
             </form>
@@ -186,9 +310,11 @@
 
             <div class="footer__contact">
 
-                <a class="footer__contact-link" href="#">+998 71 238 50 50</a>
+                <a class="footer__contact-link" href="tel:998712067070">+998 71 206 70 70</a>
 
-                <a class="footer__contact-link location" href="#">Rowing Canal, Konigil Massif, Samarkand, Uzbekistan</a>
+                <a class="footer__contact-link location" href="#">Rowing Canal, Konigil Massif, Samarkand,
+
+                    Uzbekistan</a>
 
             </div>
 
