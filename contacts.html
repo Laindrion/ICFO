@@ -41,7 +41,7 @@
                                 <img src="images/logo.png" alt="logo">
                             </a>
                             <li class="menu__list-item">
-                                <a class="menu__list-link" href="agenda.html">
+                                <a class="menu__list-link active" href="agenda.html">
                                     AGENDA
                                 </a>
                             </li>
@@ -51,7 +51,7 @@
                                 </a>
                             </li>
                             <li class="menu__list-item">
-                                <a class="menu__list-link active" href="contacts.html">
+                                <a class="menu__list-link" href="contacts.html">
                                     CONTACTS
                                 </a>
                             </li>
@@ -68,91 +68,98 @@
         </div>
     </header>
 
-<main class="main">
-    <section class="section__header">
-        <div class="section__header-wrapper">
-            <div class="section__header-img">
-                <img src="images/contacts.jpg" alt="section contacts header">
+    <main class="main">
+        <section class="section__header">
+            <div class="section__header-wrapper">
+                <div class="section__header-img">
+                    <img src="images/contacts.jpg" alt="section contacts header">
+                </div>
+                <div class="container">
+                    <h1 class="section__header-title title">
+                        Contacts
+                    </h1>
+                </div>
             </div>
+        </section>
+        <section class="contacts">
             <div class="container">
-                <h1 class="section__header-title title">
-                    Contacts
-                </h1>
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <div class="contacts__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.592655115317!2d67.06072217657763!3d39.65888110141489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d2147d4bbba83%3A0x18e27cf7ab8cf64b!2sCongress%20Center!5e0!3m2!1sru!2s!4v1688714772171!5m2!1sru!2s"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                disableDefaultUI="true" scaleControl="false"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <style>
+
+                        </style>
+                    </div>
+                    <div class="col-lg-4 col-12">
+
+                        <div class="contacts__info">
+                            <h4 class="contacts__info-title">
+                                CONTACTS
+                            </h4>
+
+                            <div class="contacts__info-item">
+                                <span class="contacts__info-item__title">
+                                    Location
+                                </span>
+                                <span class="contacts__info-item__name">
+                                    Rowing Canal, Konigil Massif, Samarkand, Uzbekistan
+                                </span>
+                            </div>
+
+                            <div class="contacts__info-item phone">
+                                <span class="contacts__info-item__title">
+                                    Call us
+                                </span>
+                                <a class="contacts__info-item__name" href="tel:998712067070">
+                                    +998 71 206 70 70
+                                </a>
+                            </div>
+
+                            <div class="contacts__info-item mail">
+                                <span class="contacts__info-item__title">
+                                    Email
+                                </span>
+                                <a class="contacts__info-item__name" href="mailto:icfs@agro.uz">
+                                    icfs@agro.uz
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="contacts">
+        </section>
+    </main>
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-12">
-                    <div class="contacts__map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.592655115317!2d67.06072217657763!3d39.65888110141489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d2147d4bbba83%3A0x18e27cf7ab8cf64b!2sCongress%20Center!5e0!3m2!1sru!2s!4v1688714772171!5m2!1sru!2s"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+            <div class="footer__wrapper">
+                <h1 class="footer__title title">
+                    CONTACT US
+                </h1>
+                <div class="footer__contact">
+                    <a class="footer__contact-link" href="tel:998712067070">+998 71 206 70 70</a>
+                    <a class="footer__contact-link location" href="#">Rowing Canal, Konigil Massif, Samarkand,
+                        Uzbekistan</a>
                 </div>
-                <div class="col-lg-4 col-12">
-
-                    <div class="contacts__info">
-                        <h4 class="contacts__info-title">
-                            CONTACTS
-                        </h4>
-
-                        <div class="contacts__info-item">
-                            <span class="contacts__info-item__title">
-                                Location
-                            </span>
-                            <span class="contacts__info-item__name">
-                                Rowing Canal, Konigil Massif, Samarkand, Uzbekistan
-                            </span>
-                        </div>
-
-                        <div class="contacts__info-item phone">
-                            <span class="contacts__info-item__title">
-                                Call us
-                            </span>
-                            <a class="contacts__info-item__name" href="tel:998712067070">
-                                +998 71 206 70 70
-                            </a>
-                        </div>
-
-                        <div class="contacts__info-item mail">
-                            <span class="contacts__info-item__title">
-                                Email
-                            </span>
-                            <a class="contacts__info-item__name" href="mailto:icfs@agro.uz">
-                                icfs@agro.uz
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
+                <p class="footer__text">
+                    The use of materials posted on the site is allowed only with the written permission of the
+                    respective
+                    copyright holder.
+                    Automated extraction of posted information by any services without official permission is
+                    prohibited.
+                </p>
             </div>
-        </div>
-    </section>
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__wrapper">
-            <h1 class="footer__title title">
-                CONTACT US
-            </h1>
-            <div class="footer__contact">
-                <a class="footer__contact-link" href="tel:998712067070">+998 71 206 70 70</a>
-                <a class="footer__contact-link location" href="#">Rowing Canal, Konigil Massif, Samarkand,
-                    Uzbekistan</a>
-            </div>
-            <p class="footer__text">
-                The use of materials posted on the site is allowed only with the written permission of the respective
-                copyright holder.
-                Automated extraction of posted information by any services without official permission is prohibited.
-            </p>
-        </div>
-</footer>
+    </footer>
 
-<script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
