@@ -25,10 +25,11 @@
 
     <section class="dashboard__data">
         <h1 class="dashboard__title-name">
-            Raphael Roytman
+            Diyor Lain
         </h1>
 
         <form action="" class="registration__form" enctype="multipart/form-data">
+            <!-- INPUTS START -->
             <div class="row">
 
                 <div class="col-lg-4">
@@ -43,6 +44,7 @@
                         Title
                         <select class="registration__form-item select" name="" id="gender">
                             <option value="0">Mr.</option>
+                            <option value="0">Mrs.</option>
                         </select>
                     </label>
                 </div>
@@ -59,6 +61,7 @@
                         Gender
                         <select class="registration__form-item select" name="" id="gender">
                             <option value="0">Male</option>
+                            <option value="0">Female</option>
                         </select>
                     </label>
                 </div>
@@ -90,9 +93,6 @@
                         <input class="registration__form-item input" type="text" name="" id="date">
                     </label>
                 </div>
-
-
-
 
                 <div class="col-lg-4">
                     <div class="registration__btn-cover">
@@ -138,19 +138,26 @@
                     <label class="registration__form-label" for="position">
                         Position
                         <select class="registration__form-item select" name="" id="position">
+                            <option value="option0"></option>
                             <option value="option1">Minister (Head of delegation)</option>
+                            <option value="option2">Government official</option>
+                            <option value="option2">Participant</option>
+                            <option value="option3">Press</option>
+                            <option value="option4">Other</option>
                         </select>
                     </label>
                 </div>
                 <div class="col-lg-4" id="current-position-1">
-                    <label class="registration__form-label" for="current-position">
+                    <label class="registration__form-label" for="current-position-1">
                         Your current position
-                        <input class="registration__form-item input" type="text" name="" id="current-position">
+                        <input class="registration__form-item input" type="text" name="" id="current-position-1">
                     </label>
                 </div>
             </div>
+            <!-- INPUTS END -->
 
-            <div id="registration-person" style="display:block;">
+            <!-- ACCOMPANYING PERSON-1 START -->
+            <div id="registration-person-1">
                 <h2 class="registration__title page__title second">
                     Accompanying person
                 </h2>
@@ -233,7 +240,7 @@
                                     <span>
                                         124.png
                                     </span>
-                                    <a href="##">Скачать</a>
+                                    <a href="##">download</a>
                                 </div>
                             </label>
                         </div>
@@ -246,7 +253,7 @@
                                     <span>
                                         124.png
                                     </span>
-                                    <a href="##">Скачать</a>
+                                    <a href="##">download</a>
                                 </div>
                             </label>
                         </div>
@@ -265,17 +272,25 @@
                         </label>
                     </div>
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="position-1">
+                        <label class="registration__form-label" for="position-p1">
                             Position
-                            <select class="registration__form-item select" name="" id="position-1">
+                            <select class="registration__form-item select" name="" id="position-p1">
                                 <option value="option2">Government official</option>
                             </select>
                         </label>
                     </div>
+                    <div class="col-lg-4" id="current-position-2">
+                        <label class="registration__form-label" for="current-position-2">
+                            Your current position
+                            <input class="registration__form-item input" type="text" name="" id="current-position-2">
+                        </label>
+                    </div>
                 </div>
             </div>
+            <!-- ACCOMPANYING PERSON-1 END -->
 
-            <div id="registration-person " style="display:block;">
+            <!-- ACCOMPANYING PERSON-2 START -->
+            <div id="registration-person-2">
                 <h4 class="registration__suptitle">
                     Person 2
                 </h4>
@@ -348,7 +363,7 @@
                                     <span>
                                         124.png
                                     </span>
-                                    <a href="##">Скачать</a>
+                                    <a href="##">download</a>
                                 </div>
                             </label>
                         </div>
@@ -361,7 +376,7 @@
                                     <span>
                                         124.png
                                     </span>
-                                    <a href="##">Скачать</a>
+                                    <a href="##">download</a>
                                 </div>
                             </label>
                         </div>
@@ -380,15 +395,88 @@
                         </label>
                     </div>
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="position-2">
+                        <label class="registration__form-label" for="position-p2">
                             Position
-                            <select class="registration__form-item select" name="" id="position-2">
+                            <select class="registration__form-item select" name="" id="position-p2">
                                 <option value="option2">Government official</option>
                             </select>
                         </label>
                     </div>
+                    <div class="col-lg-4" id="current-position-3">
+                        <label class="registration__form-label" for="current-position-3">
+                            Your current position
+                            <input class="registration__form-item input" type="text" name="" id="current-position-3">
+                        </label>
+                    </div>
                 </div>
             </div>
+            <!-- ACCOMPANYING PERSON-2 END -->
+
+
+            <!-- SESSIONS START -->
+            <div class="sessions">
+                <h1 class="sessions__title">
+                    Sessions
+                </h1>
+
+                <ul class="sessions__list">
+
+                    <h2 class="sessions__time">
+                        14:30-15:30
+                    </h2>
+                    <li class="sessions__list-item">
+                        <label for="session-1">
+                            <input class="session" type="radio" name="session-1" id="session-1">
+                            Technical Session No. 1 - Strengthening agri-food systems sustainability in landlocked
+                            countries
+                        </label>
+                    </li>
+
+                    <li class="sessions__list-item">
+                        <label for="session-2">
+                            <input class="session" type="radio" name="session-1" id="session-2">
+                            Technical Session No. 2 - Food security and access to healthy diets
+                        </label>
+                    </li>
+
+                    <li class="sessions__list-item">
+                        <label for="session-3">
+                            <input class="session" type="radio" name="session-1" id="session-3">
+                            Technical Session No. 3 - Climate change impacts on food security
+                        </label>
+                    </li>
+
+                    <h2 class="sessions__time">
+                        16:00 – 17:00
+                    </h2>
+
+                    <li class="sessions__list-item">
+                        <label for="session-4">
+                            <input class="session" type="radio" name="session-2" id="session-4">
+                            Technical Session No. 4 - Strengthening gender equality in rural areas
+                        </label>
+                    </li>
+                    <li class="sessions__list-item">
+                        <label for="session-5">
+                            <input class="session" type="radio" name="session-2" id="session-5">
+                            Technical Session No. 5 - Water and food security
+                        </label>
+                    </li>
+                    <li class="sessions__list-item">
+                        <label for="session-6">
+                            <input class="session" type="radio" name="session-2" id="session-6">
+                            Technical Session No. 6 - Agri-food trade promotion for strengthening food security
+                        </label>
+                    </li>
+                    <li class="sessions__list-item">
+                        <label for="session-7">
+                            <input class="session" type="radio" name="session-2" id="session-7">
+                            Technical Session No. 7 - Innovative agricultural development and digital agriculture
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <!-- SESSIONS END -->
 
             <div class="dashboard__table-btn__cover" id="dashboard__table-btn__cover">
                 <a class="dashboard__table-btn refuse" href="#">
@@ -400,7 +488,6 @@
             </div>
         </form>
     </section>
-
 </main>
 
 </div>
