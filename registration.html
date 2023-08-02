@@ -90,18 +90,24 @@
                 FORM
             </h2>
 
-            <form action="http://adminicfs.agro.uz/api/data" class="registration__form" enctype="multipart/form-data"
+            <form action="https://adminicfs.agro.uz/api/data" class="registration__form" enctype="multipart/form-data"
                 id="registration-form">
                 <!-- INPUTS START -->
                 <div class="row" id="person">
 
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="email">
-                            Email
-                            <input required class="registration__form-item input" type="email" name="Members[email][0]"
-                                id="email">
+                        <label class="registration__form-label" for="name">
+                            First name
+                            <input required class="registration__form-item input" type="text" name="Members[name][0]"
+                                id="name">
+                        </label>
+                    </div>
 
-                            <span class="">*Important, all relevant information will be sent to this address</span>
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="surname">
+                            Surname
+                            <input required class="registration__form-item input" type="text" name="Members[surname][0]"
+                                id="surname">
                         </label>
                     </div>
 
@@ -121,14 +127,6 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="phone">
-                            Phone
-                            <input required class="registration__form-item input" type="number" name="Members[phone][0]"
-                                id="phone">
-                        </label>
-                    </div>
-
-                    <div class="col-lg-4">
                         <label class="registration__form-label" for="members-gender-0">
                             Gender
                             <select id="members-gender-0" class="registration__form-item select form-control"
@@ -142,18 +140,28 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="name">
-                            First name
-                            <input required class="registration__form-item input" type="text" name="Members[name][0]"
-                                id="name">
+                        <label class="registration__form-label" for="date">
+                            Date of birth
+                            <input required class="registration__form-item input" type="date" data-role="calendarpicker"
+                                name="Members[birth_date][0]" id="date">
                         </label>
                     </div>
 
                     <div class="col-lg-4">
-                        <label class="registration__form-label" for="surname">
-                            Surname
-                            <input required class="registration__form-item input" type="text" name="Members[surname][0]"
-                                id="surname">
+                        <label class="registration__form-label" for="email">
+                            Email
+                            <input required class="registration__form-item input" type="email" name="Members[email][0]"
+                                id="email">
+
+                            <span class="">*Important, all relevant information will be sent to this address</span>
+                        </label>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="phone">
+                            Phone
+                            <input required class="registration__form-item input" type="number" name="Members[phone][0]"
+                                id="phone">
                         </label>
                     </div>
 
@@ -360,16 +368,6 @@
                         </label>
                     </div>
 
-                    <div class="col-lg-4">
-                        <label class="registration__form-label" for="date">
-                            Date of birth
-                            <input required class="registration__form-item input" type="date" data-role="calendarpicker"
-                                birth-date="2023-07-11" formatdate name="Members[birth_date][0]" id="date">
-                        </label>
-                    </div>
-
-
-
                     <div class="col-lg-4"></div>
 
                     <div class="col-lg-4">
@@ -378,10 +376,13 @@
                                 Photo
                                 <span class="registration__form-photo">
                                     <img src="images/gallery.svg" alt="gallery">
-                                    Load
+                                    <span id="photo-text">
+                                        Load
+                                    </span>
                                 </span>
-                                <input required type="file" accept=".png, .jpg, .jpeg, .pdf" name="Members[photo][0]"
-                                    id="photo">
+                                <input class="registration__form-item" required type="file"
+                                    accept=".png, .jpg, .jpeg, .pdf" name="Members[photo][0]" id="photo"
+                                    max-size="20971520">
                             </label>
                         </div>
                     </div>
@@ -391,10 +392,13 @@
                                 Passport photo
                                 <span class="registration__form-photo">
                                     <img src="images/gallery.svg" alt="gallery">
-                                    Load
+                                    <span id="passport-text">
+                                        Load
+                                    </span>
                                 </span>
-                                <input required type="file" accept=".png, .jpg, .jpeg, .pdf" name="Members[passport][0]"
-                                    id="passport">
+                                <input class="registration__form-item" required type="file"
+                                    accept=".png, .jpg, .jpeg, .pdf" name="Members[passport][0]" id="passport"
+                                    max-size="20971520">
                             </label>
                         </div>
                     </div>
@@ -405,6 +409,14 @@
                             Organisation
                             <input required class="registration__form-item input" type="text"
                                 name="Members[organization][0]" id="organisation">
+                        </label>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label class="registration__form-label" for="job-title">
+                            Job title
+                            <input required class="registration__form-item input" type="text"
+                                name="Members[job_title][0]" id="job-title">
                         </label>
                     </div>
                     <div class="col-lg-4">
@@ -448,13 +460,20 @@
                         Person 1
                     </h4>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <label class="registration__form-label" for="email-1">
-                                Email
-                                <input required class="registration__form-item input" type="email"
-                                    name="Members[email][1]" id="email-1">
 
-                                <span class="">*Important, all relevant information will be sent to this address</span>
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="name-1">
+                                First name
+                                <input required class="registration__form-item input" type="text"
+                                    name="Members[name][1]" id="name-1">
+                            </label>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="surname-1">
+                                Surname
+                                <input required class="registration__form-item input" type="text"
+                                    name="Members[surname][1]" id="surname-1">
                             </label>
                         </div>
 
@@ -474,14 +493,6 @@
                         </div>
 
                         <div class="col-lg-4">
-                            <label class="registration__form-label" for="phone-1">
-                                Phone
-                                <input required class="registration__form-item input" type="number"
-                                    name="Members[phone][1]" id="phone-1">
-                            </label>
-                        </div>
-
-                        <div class="col-lg-4">
                             <label class="registration__form-label" for="members-gender-1">
                                 Gender
                                 <select id="members-gender-1" class="registration__form-item select form-control"
@@ -495,18 +506,32 @@
                         </div>
 
                         <div class="col-lg-4">
-                            <label class="registration__form-label" for="name-1">
-                                First name
-                                <input required class="registration__form-item input" type="text"
-                                    name="Members[name][1]" id="name-1">
+                            <label class="registration__form-label" for="date-1">
+                                Date of birth
+                                <input required class="registration__form-item input" type="date"
+                                    data-role="calendarpicker" formatdate name="Members[birth_date][1]" id="date-1">
                             </label>
                         </div>
 
+
                         <div class="col-lg-4">
-                            <label class="registration__form-label" for="surname-1">
-                                Surname
-                                <input required class="registration__form-item input" type="text"
-                                    name="Members[surname][1]" id="surname-1">
+                            <label class="registration__form-label" for="email-1">
+                                Email
+                                <input required class="registration__form-item input" type="email"
+                                    name="Members[email][1]" id="email-1">
+
+                                <span class="">*Important, all relevant information will be sent to this
+                                    address</span>
+                            </label>
+                        </div>
+
+
+
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="phone-1">
+                                Phone
+                                <input required class="registration__form-item input" type="number"
+                                    name="Members[phone][1]" id="phone-1">
                             </label>
                         </div>
 
@@ -713,16 +738,6 @@
                             </label>
                         </div>
 
-                        <div class="col-lg-4">
-                            <label class="registration__form-label" for="date-1">
-                                Date of birth
-                                <input required class="registration__form-item input" type="date"
-                                    data-role="calendarpicker" formatdate name="Members[birth_date][1]" id="date-1">
-                            </label>
-                        </div>
-
-
-
                         <div class="col-lg-4"></div>
 
                         <div class="col-lg-4">
@@ -731,10 +746,13 @@
                                     Photo
                                     <span class="registration__form-photo">
                                         <img src="images/gallery.svg" alt="photo">
-                                        Load
+                                        <span id="photo-text-1">
+                                            Load
+                                        </span>
                                     </span>
-                                    <input required type="file" accept=".png, .jpg, .jpeg, .pdf"
-                                        name="Members[photo][1]" id="photo-1">
+                                    <input required class="registration__form-item" type="file"
+                                        accept=".png, .jpg, .jpeg, .pdf" name="Members[photo][1]" id="photo-1"
+                                        max-size="20971520">
                                 </label>
                             </div>
                         </div>
@@ -744,10 +762,13 @@
                                     Passport photo
                                     <span class="registration__form-photo">
                                         <img src="images/gallery.svg" alt="passport">
-                                        Load
+                                        <span id="passport-text-1">
+                                            Load
+                                        </span>
                                     </span>
-                                    <input required type="file" accept=".png, .jpg, .jpeg, .pdf"
-                                        name="Members[passport][1]" id="passport-1">
+                                    <input required class="registration__form-item" type="file"
+                                        accept=".png, .jpg, .jpeg, .pdf" name="Members[passport][1]" id="passport-1"
+                                        max-size="20971520">
                                 </label>
                             </div>
                         </div>
@@ -758,6 +779,14 @@
                                 Organisation
                                 <input required class="registration__form-item input" type="text"
                                     name="Members[organization][1]" id="organisation-1">
+                            </label>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="job-title-1">
+                                Job title
+                                <input required class="registration__form-item input" type="text"
+                                    name="Members[job_title][1]" id="job-title-1">
                             </label>
                         </div>
                         <div class="col-lg-4">
@@ -798,13 +827,20 @@
                         Person 2
                     </h4>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <label class="registration__form-label" for="email-2">
-                                Email
-                                <input required class="registration__form-item input" type="email"
-                                    name="Members[email][2]" id="email-2">
 
-                                <span class="">*Important, all relevant information will be sent to this address</span>
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="name-2">
+                                First name
+                                <input required class="registration__form-item input" type="text"
+                                    name="Members[name][2]" id="name-2">
+                            </label>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="surname-2">
+                                Surname
+                                <input required class="registration__form-item input" type="text"
+                                    name="Members[surname][2]" id="surname-2">
                             </label>
                         </div>
 
@@ -824,14 +860,6 @@
                         </div>
 
                         <div class="col-lg-4">
-                            <label class="registration__form-label" for="phone-2">
-                                Phone
-                                <input required class="registration__form-item input" type="number"
-                                    name="Members[phone][2]" id="phone-2">
-                            </label>
-                        </div>
-
-                        <div class="col-lg-4">
                             <label class="registration__form-label" for="gender-2">
                                 Gender
                                 <select id="members-gender-2" class="registration__form-item select form-control"
@@ -845,18 +873,29 @@
                         </div>
 
                         <div class="col-lg-4">
-                            <label class="registration__form-label" for="name-2">
-                                First name
-                                <input required class="registration__form-item input" type="text"
-                                    name="Members[name][2]" id="name-2">
+                            <label class="registration__form-label" for="date-2">
+                                Date of birth
+                                <input required class="registration__form-item input" type="date"
+                                    data-role="calendarpicker" formatdate name="Members[birth_date][2]" id="date-2">
                             </label>
                         </div>
 
                         <div class="col-lg-4">
-                            <label class="registration__form-label" for="surname-2">
-                                Surname
-                                <input required class="registration__form-item input" type="text"
-                                    name="Members[surname][2]" id="surname-2">
+                            <label class="registration__form-label" for="email-2">
+                                Email
+                                <input required class="registration__form-item input" type="email"
+                                    name="Members[email][2]" id="email-2">
+
+                                <span class="">*Important, all relevant information will be sent to this
+                                    address</span>
+                            </label>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="phone-2">
+                                Phone
+                                <input required class="registration__form-item input" type="number"
+                                    name="Members[phone][2]" id="phone-2">
                             </label>
                         </div>
 
@@ -1063,16 +1102,6 @@
                             </label>
                         </div>
 
-                        <div class="col-lg-4">
-                            <label class="registration__form-label" for="date-2">
-                                Date of birth
-                                <input required class="registration__form-item input" type="date"
-                                    data-role="calendarpicker" formatdate name="Members[birth_date][2]" id="date-2">
-                            </label>
-                        </div>
-
-
-
                         <div class="col-lg-4"></div>
 
                         <div class="col-lg-4">
@@ -1081,10 +1110,13 @@
                                     Photo
                                     <span class="registration__form-photo">
                                         <img src="images/gallery.svg" alt="gallery">
-                                        Load
+                                        <span id="photo-text-2">
+                                            Load
+                                        </span>
                                     </span>
-                                    <input required type="file" accept=".png, .jpg, .jpeg, .pdf"
-                                        name="Members[photo][2]" id="photo-2">
+                                    <input required class="registration__form-item" type="file"
+                                        accept=".png, .jpg, .jpeg, .pdf" name="Members[photo][2]" id="photo-2"
+                                        max-size="20971520">
                                 </label>
                             </div>
                         </div>
@@ -1094,10 +1126,13 @@
                                     Passport photo
                                     <span class="registration__form-photo">
                                         <img src="images/gallery.svg" alt="gallery">
-                                        Load
+                                        <span id="passport-text-2">
+                                            Load
+                                        </span>
                                     </span>
-                                    <input required type="file" accept=".png, .jpg, .jpeg, .pdf"
-                                        name="Members[passport][2]" id="passport-2">
+                                    <input required class="registration__form-item" type="file"
+                                        accept=".png, .jpg, .jpeg, .pdf" name="Members[passport][2]" id="passport-2"
+                                        max-size="20971520">
                                 </label>
                             </div>
                         </div>
@@ -1108,6 +1143,14 @@
                                 Organisation
                                 <input required class="registration__form-item input" type="text"
                                     name="Members[organization][2]" id="organisation-2">
+                            </label>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label class="registration__form-label" for="job-title-2">
+                                Job title
+                                <input required class="registration__form-item input" type="text"
+                                    name="Members[job_title][2]" id="job-title-2">
                             </label>
                         </div>
                         <div class="col-lg-4">
@@ -1153,25 +1196,37 @@
                         <h2 class="sessions__time">
                             14:30-15:30
                         </h2>
+
                         <li class="sessions__list-item">
                             <label for="session-1">
-                                <input class="session" value="1" type="radio" name="session-1" id="session-1" checked>
-                                Technical Session No. 1 - Strengthening agri-food systems sustainability in landlocked
-                                countries
+                                <input class="registration__form-item session" value="1" type="radio"
+                                    name="Members[sessions]" id="session-1" required>
+                                Technical Session No. 1 - Strengthening agrifood systems sustainability in
+                                landlocked countries
                             </label>
                         </li>
 
                         <li class="sessions__list-item">
                             <label for="session-2">
-                                <input class="session" value="2" type="radio" name="session-1" id="session-2">
+                                <input class="registration__form-item session" value="2" type="radio"
+                                    name="Members[sessions]" id="session-2" required>
                                 Technical Session No. 2 - Food security and access to healthy diets
                             </label>
                         </li>
 
                         <li class="sessions__list-item">
                             <label for="session-3">
-                                <input class="session" value="3" type="radio" name="session-1" id="session-3">
+                                <input class="registration__form-item session" value="3" type="radio"
+                                    name="Members[sessions]" id="session-3" required>
                                 Technical Session No. 3 - Climate change impacts on food security
+                            </label>
+                        </li>
+
+                        <li class="sessions__list-item">
+                            <label for="session-4">
+                                <input class="registration__form-item session" value="8" type="radio"
+                                    name="Members[sessions]" id="session-4" required>
+                                Technical Session No. 4 - Food security. Challenges and solutions in the SCO.
                             </label>
                         </li>
 
@@ -1179,28 +1234,36 @@
                             16:00 – 17:00
                         </h2>
 
-                        <li class="sessions__list-item">
-                            <label for="session-4">
-                                <input class="session" value="4" type="radio" name="session-2" id="session-4">
-                                Technical Session No. 4 - Strengthening gender equality in rural areas
-                            </label>
-                        </li>
+
                         <li class="sessions__list-item">
                             <label for="session-5">
-                                <input class="session" value="5" type="radio" name="session-2" id="session-5">
-                                Technical Session No. 5 - Water and food security
+                                <input class="registration__form-item session" value="4" type="radio"
+                                    name="Members[sessions2]" id="session-5">
+                                Technical Session No. 5 - Strengthening gender equality in rural areas
                             </label>
                         </li>
                         <li class="sessions__list-item">
                             <label for="session-6">
-                                <input class="session" value="6" type="radio" name="session-2" id="session-6">
-                                Technical Session No. 6 - Agri-food trade promotion for strengthening food security
+                                <input class="registration__form-item session" value="5" type="radio"
+                                    name="Members[sessions2]" id="session-6">
+                                Technical Session No. 6 - Water and food security
                             </label>
                         </li>
+
                         <li class="sessions__list-item">
                             <label for="session-7">
-                                <input class="session" value="7" type="radio" name="session-2" id="session-7">
-                                Technical Session No. 7 - Innovative agricultural development and digital agriculture
+                                <input class="registration__form-item session" value="6" type="radio"
+                                    name="Members[sessions2]" id="session-7">
+                                Technical Session No. 7 - Agrifood trade promotion for strengthening food security
+                            </label>
+                        </li>
+
+                        <li class="sessions__list-item">
+                            <label for="session-8">
+                                <input class="registration__form-item session" value="7" type="radio"
+                                    name="Members[sessions2]" id="session-8">
+                                Technical Session No. 8 - Innovative agricultural development and digital
+                                agriculture
                             </label>
                         </li>
                     </ul>
@@ -1211,16 +1274,59 @@
                 <!-- SESSIONS END -->
 
                 <div class="col-12">
-                    <button class="registration__form-apply" type="submit" form="registration-form">Apply</button>
+                    <button class="registration__form-apply" type="submit" form="registration-form"
+                        id="registration-submit-btn">Register</button>
                 </div>
             </form>
         </div>
     </section>
 
+    <div class="registration__modal" id="registration-modal">
+        <span class="registration__modal-loading" id="loading">
+            <img src="images/loading.svg" alt="">
+        </span>
 
-    <script>
+        <div class="registration__modal-inner" id="registration-true">
+            <a href="#" class="registration__modal-close" id="modal-close">
+                <img src="images/close.svg" alt="">
+            </a>
 
-    </script>
+            <p class="registration__modal-text">
+                <strong class="success"> Thank you! </strong>
+                <br>
+                We have received your application.
+                <br>
+                We will contact you as soon as possible after verifying the data you entered during the application.
+                <br>
+                Look for an email from ICFS now. Check your spam, junk, or promotions folder if you can't find the
+                e-mail.
+                <br>
+                Important!
+                <br>
+                If the e-mail is in your spam, junk, or promotions folder, don't forget to move the e-mail to your
+                inbox by clicking "Not Spam", "Not Junk", or "Not Promotions" so you don't miss any further e-mails
+            </p>
+        </div>
+
+
+        <div class="registration__modal-inner" id="registration-false">
+            <a href="#" class="registration__modal-close" id="modal-close-2">
+                <img src="images/close.svg" alt="">
+            </a>
+
+            <p class="registration__modal-text">
+                <strong> This email address was used for registration before.</strong>
+                <br>
+                Your application as a conference participant has already been accepted for consideration. The
+                organizing
+                committee will send you additional instructions as soon as possible to the e-mail you submitted
+                during
+                registration
+            </p>
+        </div>
+
+
+    </div>
 </main>
 
 <footer class="footer">
